@@ -25,6 +25,7 @@ spring:
     user:
       name: admin
       password: secret123
+      roles: ADMIN
   boot.admin.client:
     url: http://localhost:8888/admin
     username: root
