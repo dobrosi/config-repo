@@ -1,28 +1,3 @@
-tomcat:
-  ajp:
-    enabled: true
-    port: 8009
-    address: 0.0.0.0
-    remoteauthentication: false
-
-security:
-  jmx:
-    enabled: true
-
-management:
-  endpoints:
-    web.exposure.include: '*'
-  endpoint:
-    health.show-details: always
-    jolokia:
-      enabled: true
-      access:
-        admin:  # csak admin jogosultságú felhasználóknak
-          roles: "ROLE_ADMIN"
-        execute:
-          roles: "ROLE_ADMIN"
-    env.show-values: ALWAYS
-
 spring:
   jmx.unique-names: true
   security:
@@ -41,6 +16,25 @@ spring:
           password: ${spring.security.user.password}
 
 management.endpoints.jmx.domain: com.github.dobrosi.demo
+
+tomcat:
+  ajp:
+    enabled: true
+    port: 8009
+    address: 0.0.0.0
+    remoteauthentication: false
+
+security:
+  jmx:
+    enabled: true
+
+management:
+  endpoints:
+    web.exposure.include: '*'
+  endpoint:
+    health.show-details: always
+    jolokia.enabled: true
+    env.show-values: ALWAYS
 
 test:
   value: 7
