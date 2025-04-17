@@ -13,7 +13,11 @@ security:
 management:
   endpoints:
     web.exposure.include: '*'
-  endpoint.health.show-details: always
+  endpoint:
+    health.show-details: always
+    jolokia.enabled: true
+    env.show-values: ALWAYS
+
 
 spring:
   jmx.unique-names: true
@@ -27,8 +31,9 @@ spring:
     password: secret
     instance:
       metadata:
-        user.name: admin
-        user.password: secret123
+        user:
+          name: ${spring.security.user.name}
+          password: ${spring.security.user.password}
 
 management.endpoints.jmx.domain: com.github.dobrosi.demo
 
