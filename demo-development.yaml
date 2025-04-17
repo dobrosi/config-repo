@@ -7,8 +7,8 @@ spring:
       roles: ADMIN
   boot.admin.client:
     url: http://localhost:8888/admin
-    username: sba
-    password: sba12358
+    username: ${admin.username}
+    password: ${admin.password}
     instance:
       metadata:
         user:
