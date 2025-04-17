@@ -1,3 +1,22 @@
+spring:
+  jmx.unique-names: true
+  security:
+    user:
+      name: admin
+      password: secret123
+      roles: ADMIN
+  boot.admin.client:
+    url: http://localhost:8888/admin
+    username: sba
+    password: sba12358
+    instance:
+      metadata:
+        user:
+          name: ${spring.security.user.name}
+          password: ${spring.security.user.password}
+
+management.endpoints.jmx.domain: com.github.dobrosi.demo
+
 tomcat:
   ajp:
     enabled: true
