@@ -37,4 +37,4 @@ management:
     env.show-values: ALWAYS
 
 test:
-  value: 7
+  value: Andris
