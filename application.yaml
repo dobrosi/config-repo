@@ -1,3 +1,19 @@
+tomcat:
+  ajp:
+    enabled: true
+    port: 8009
+    address: 0.0.0.0
+    remoteauthentication: false
+  jmx:
+    enabled: true
 
+management:
+  endpoints:
+    web.exposure.include: '*'
+  endpoint.health.show-details: always
+
+spring.jmx.unique-names: true
+management.endpoints.jmx.domain: com.github.dobrosi.demo
 test:
   value: 19
+
