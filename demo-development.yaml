@@ -15,7 +15,13 @@ management:
     web.exposure.include: '*'
   endpoint.health.show-details: always
 
-spring.jmx.unique-names: true
+spring:
+  jmx.unique-names: true
+  security:
+    user:
+      name: admin
+      password: secret123
+
 management.endpoints.jmx.domain: com.github.dobrosi.demo
 
 test:
