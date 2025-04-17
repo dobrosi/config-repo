@@ -17,6 +17,8 @@ management:
     jolokia:
       enabled: true
       access:
+        admin:  # csak admin jogosultságú felhasználóknak
+          roles: "ROLE_ADMIN"
         execute:
           roles: "ROLE_ADMIN"
     env.show-values: ALWAYS
