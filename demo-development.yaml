@@ -6,7 +6,6 @@ tomcat:
     remoteauthentication: false
 
 security:
-  filter-order=5:
   jmx:
     enabled: true
 
@@ -15,9 +14,12 @@ management:
     web.exposure.include: '*'
   endpoint:
     health.show-details: always
-    jolokia.enabled: true
+    jolokia:
+      enabled: true
+      access:
+        execute:
+          roles: "ROLE_ADMIN"
     env.show-values: ALWAYS
-
 
 spring:
   jmx.unique-names: true
