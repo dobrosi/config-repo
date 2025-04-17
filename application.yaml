@@ -17,3 +17,6 @@ management:
 
 spring.jmx.unique-names: true
 management.endpoints.jmx.domain: com.github.dobrosi.demo
+
+test:
+  value: 19
