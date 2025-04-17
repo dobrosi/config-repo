@@ -9,11 +9,6 @@ spring:
     url: http://localhost:8888/admin
     username: root
     password: secret
-    instance:
-      metadata:
-        user:
-          name: ${spring.security.user.name}
-          password: ${spring.security.user.password}
 
 management.endpoints.jmx.domain: com.github.dobrosi.demo
 
