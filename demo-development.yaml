@@ -21,6 +21,14 @@ spring:
     user:
       name: admin
       password: secret123
+  boot.admin.client:
+    url: http://localhost:8888/admin
+    username: root
+    password: secret
+    instance:
+      metadata:
+        user.name: admin
+        user.password: secret123
 
 management.endpoints.jmx.domain: com.github.dobrosi.demo
 
