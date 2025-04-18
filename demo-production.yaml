@@ -1,9 +1,5 @@
 test.value: Próba Nóra
-
 spring:
-  application.name: demo
-  profiles.active: production
-
   jmx.unique-names: true
   security:
     user:
