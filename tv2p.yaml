@@ -1,0 +1,25 @@
+spring:
+  jmx.unique-names: true
+  security:
+    user:
+      name: admin
+      password: secret123
+      roles: ADMIN
+  boot.admin.client:
+    url: http://localhost:8888/admin
+    instance:
+      metadata:
+        user:
+          name: ${spring.security.user.name}
+          password: ${spring.security.user.password}
+security:
+  jmx:
+    enabled: true
+management:
+  endpoints:
+    jmx.domain: com.github.dobrosi.demo
+    web.exposure.include: '*'
+  endpoint:
+    health.show-details: always
+    jolokia.enabled: true
+    env.show-values: ALWAYS
